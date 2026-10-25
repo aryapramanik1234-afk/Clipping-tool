@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8fc" />
+    <meta name="description" content="A local-first, approval-first short-form video clipping studio." />
+    <title>Clipline — Local Studio</title>
+    <link rel="preconnect" href="/static" />
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#overview" aria-label="Clipline home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none"><path d="M8 10.5A4.5 4.5 0 1 1 8 19.5a4.5 4.5 0 0 1 0-9ZM28 16.5A4.5 4.5 0 1 1 28 25.5a4.5 4.5 0 0 1 0-9Z" stroke="currentColor" stroke-width="2.4"/><path d="m11.8 17.7 12.5 5.5M11.8 12.5l12.5 5.1M14.5 18l7-3.1" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M19 9.5 29 18l-10 8.5V9.5Z" fill="currentColor" opacity=".92"/></svg>
+          </span>
+          <span class="brand-copy"><strong>clipline</strong><small>LOCAL STUDIO</small></span>
+        </a>
+
+        <div class="workspace-switcher">
+          <span class="workspace-avatar">S</span>
+          <span class="workspace-copy"><strong>Solo workspace</strong><small>Personal creator</small></span>
+          <span class="switcher-chevron" aria-hidden="true">⌄</span>
+        </div>
+
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a href="#overview" class="nav-link active" data-page="overview">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/></svg><span>Overview</span>
+          </a>
+          <a href="#library" class="nav-link" data-page="library">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5h4l2 2h7A2.5 2.5 0 0 1 21 9.5v8a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-10Z"/><path d="M3 10h18"/></svg><span>Library</span><span class="nav-count" id="library-count">0</span>
+          </a>
+          <a href="#review" class="nav-link" data-page="review">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v14H3V6a2 2 0 0 1 2-2Z"/><path d="M8 2v4M16 2v4M7.5 11h9M7.5 15h6"/></svg><span>Review queue</span><span class="nav-count nav-count-accent" id="review-count">0</span>
+          </a>
+          <a href="#calendar" class="nav-link" data-page="calendar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M16 3v4M8 3v4M3 10h18M8 14h3M8 17h7"/></svg><span>Calendar</span>
+          </a>
+          <a href="#analytics" class="nav-link" data-page="analytics">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20V7"/></svg><span>Analytics</span>
+          </a>
+        </nav>
+
+        <p class="nav-label nav-label-spaced">PREFERENCES</p>
+        <nav class="side-nav" aria-label="Preferences">
+          <a href="#settings" class="nav-link" data-page="settings">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z"/><path d="m19.4 13.5 1.1.9-1.2 2.1-1.4-.5a7.7 7.7 0 0 1-1.8 1l-.3 1.5h-2.4l-.4-1.5a7.6 7.6 0 0 1-2-.1l-1 1.1-2.2-1.2.5-1.5a7.7 7.7 0 0 1-1-1.8l-1.5-.3v-2.5l1.5-.4a7.5 7.5 0 0 1 .1-2l-1.1-1L7 5.2l1.5.5a7.7 7.7 0 0 1 1.8-1l.3-1.5h2.5l.4 1.5a7.5 7.5 0 0 1 2 .1l1-1.1 2.1 1.2-.5 1.5a7.7 7.7 0 0 1 1 1.8l1.5.3V11l-1.5.4a7.4 7.4 0 0 1-.1 2.1Z"/></svg><span>Settings</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+        <div class="sidebar-storage" id="sidebar-storage">
+          <div class="storage-heading"><span>Local storage</span><span class="storage-dot"></span></div>
+          <div class="storage-copy">Your media stays on this device.</div>
+          <div class="storage-meter"><span id="storage-meter-fill"></span></div>
+          <div class="storage-foot"><span id="storage-size">0 MB used</span><span>LOCAL</span></div>
+        </div>
+        <div class="sidebar-user">
+          <div class="user-avatar">S</div>
+          <div class="sidebar-user-copy"><strong>Creator</strong><small>Approval required</small></div>
+          <button class="icon-button user-menu" aria-label="Workspace menu" title="Workspace menu">•••</button>
+        </div>
+      </aside>
+
+      <div class="main-frame">
+        <header class="topbar">
+          <div class="topbar-context"><button class="mobile-menu icon-button" id="mobile-menu" aria-label="Open navigation">☰</button><span class="breadcrumb-muted">Workspace</span><span class="breadcrumb-divider">/</span><span id="page-title" class="breadcrumb-current">Overview</span></div>
+          <div class="topbar-actions">
+            <span class="local-pill"><span class="status-dot"></span> LOCAL MODE</span>
+            <span class="topbar-divider"></span>
+            <button class="platform-chip" id="platform-chip" title="YouTube publishing is not connected"><span class="youtube-icon">▶</span> YouTube Shorts <span class="chip-chevron">⌄</span></button>
+            <button class="top-avatar" aria-label="Creator profile">S</button>
+          </div>
+        </header>
+        <main id="app-view" class="app-view" tabindex="-1"></main>
+      </div>
+    </div>
+    <div id="modal-root"></div>
+    <div id="toast-root" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>
